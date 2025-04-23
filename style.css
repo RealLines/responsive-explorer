@@ -1,0 +1,55 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFFAFB;
+  color: #131515;
+}
+
+.first {
+  background-image: url('img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #7DE2D1 !important;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.card {
+  background-color: #F8F9FA;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #2B2C28;
+  color: #FFFAFB;
+}
+
+.btn-outline-light {
+  border-color: #7DE2D1;
+  color: #7DE2D1;
+}
+
+.btn-outline-light:hover {
+  background-color: #7DE2D1;
+  color: #131515;
+}
+
+.bg-primary {
+  background-color: #339989 !important;
+}
+/* ChatGPT Code*/
+.before-after-img {
+  aspect-ratio: 4 / 3;        /* Keeps a consistent ratio */
+  width: 100%;                /* Full width of the column */
+  object-fit: cover;          /* Crop and center the image */
+  border-radius: 0.5rem;      /* Optional: rounded corners */
+}
+
