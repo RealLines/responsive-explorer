@@ -1,6 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #FFFAFB;
+  background-color: 	#DCDCDC;
   color: #131515;
 }
 
@@ -13,7 +13,7 @@ body {
 
 .nav-link:hover {
   text-decoration: underline;
-  color: #7DE2D1 !important;
+  color: #4FB3A3 !important;
 }
 
 section {
@@ -33,17 +33,17 @@ footer {
 }
 
 .btn-outline-light {
-  border-color: #7DE2D1;
-  color: #7DE2D1;
+  border-color: #4FB3A3;
+  color: #4FB3A3;
 }
 
 .btn-outline-light:hover {
-  background-color: #7DE2D1;
+  background-color: #4FB3A3;
   color: #131515;
 }
 
 .bg-primary {
-  background-color: #339989 !important;
+  background-color: #4FB3A3 !important;
 }
 /* ChatGPT Code*/
 .before-after-img {
