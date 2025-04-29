@@ -1,7 +1,12 @@
+/* Universal Class */
+.universal-text {
+  font-family: 'Roboto', sans-serif;
+  color: #131515; /* Ensures text color remains consistent */
+}
+
+/* Specific Styles for Body, Header, etc. */
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: 	#DCDCDC;
-  color: #131515;
+  background-color: #DCDCDC;
 }
 
 .first {
@@ -45,11 +50,10 @@ footer {
 .bg-primary {
   background-color: #4FB3A3 !important;
 }
-/* ChatGPT Code*/
-.before-after-img {
-  aspect-ratio: 4 / 3;        /* Keeps a consistent ratio */
-  width: 100%;                /* Full width of the column */
-  object-fit: cover;          /* Crop and center the image */
-  border-radius: 0.5rem;      /* Optional: rounded corners */
-}
 
+.before-after-img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}

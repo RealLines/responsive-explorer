@@ -5,9 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chayse's Cleaning | Pricing</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    .pricing-card {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .pricing-card.fade-in {
+      opacity: 1;
+    }
+  </style>
 </head>
-<body>
+<body class="universal-text">
 
   <!-- Header -->
   <header class="bg-dark text-light py-3">
@@ -25,52 +38,54 @@
     </div>
   </header>
 
-  <!-- Pricing Section -->
-  <section class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Simple, Transparent Pricing</h2>
-      <p class="text-center mb-5">We charge by the window so you always know exactly what you're paying for. No hidden fees.</p>
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-4 pricing-card">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <h5 class="card-title">Standard Home</h5>
-              <p class="card-text fs-5">$7 per window</p>
-              <p class="text-muted">Perfect for residential homes with 10–30 windows.</p>
+  <main>
+    <!-- Pricing Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Simple, Transparent Pricing</h2>
+        <p class="text-center mb-5">We charge by the window so you always know exactly what you're paying for. No hidden fees.</p>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-4 pricing-card">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <h5 class="card-title">Standard Home</h5>
+                <p class="card-text fs-5">$7 per window</p>
+                <p class="text-muted">Perfect for residential homes with 10–30 windows.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 pricing-card">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <h5 class="card-title">Commercial Packages</h5>
+                <p class="card-text fs-5">$8–$9 per window</p>
+                <p class="text-muted">Ideal for small to mid-sized storefronts and businesses.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 pricing-card">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <h5 class="card-title">Add-ons</h5>
+                <ul class="list-unstyled">
+                  <li>Screen Cleaning</li>
+                  <li>Hard Water Stain Removal</li>
+                </ul>
+                <p class="small text-muted">Custom quotes available for large properties.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4 pricing-card">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <h5 class="card-title">Commercial Packages</h5>
-              <p class="card-text fs-5">$8–$9 per window</p>
-              <p class="text-muted">Ideal for small to mid-sized storefronts and businesses.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 pricing-card">
-          <div class="card h-100">
-            <div class="card-body text-center">
-              <h5 class="card-title">Add-ons</h5>
-              <ul class="list-unstyled">
-                <li>Screen Cleaning</li>
-                <li>Hard Water Stain Removal</li>
-              </ul>
-              <p class="small text-muted">Custom quotes available for large properties.</p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Quote Button -->
-      <div class="text-center my-5">
-        <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#quoteModal">
-          Get a Free Quote
-        </button>
+        <!-- Quote Button -->
+        <div class="text-center my-5">
+          <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#quoteModal">
+            Get a Free Quote
+          </button>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Modal -->
   <div class="modal fade" id="quoteModal" tabindex="-1" aria-labelledby="quoteModalLabel" aria-hidden="true">
@@ -88,7 +103,7 @@
             </div>
             <div class="mb-3">
               <label for="phone_num" class="form-label">Phone Number</label>
-              <input type="phone_num" class="form-control" id="phone_num" required>
+              <input type="tel" class="form-control" id="phone_num" required>
             </div>
             <div class="mb-3">
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -107,34 +122,28 @@
     <p>&copy; 2025 Chayse's Cleaning. All rights reserved.</p>
   </footer>
 
-  <!-- Bootstrap JavaScript -->
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Custom JavaScript -->
   <script>
     // Pricing cards fade-in animation
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const pricingCards = document.querySelectorAll('.pricing-card');
       pricingCards.forEach((card, index) => {
         setTimeout(() => {
           card.classList.add('fade-in');
-        }, index * 300); // delay each card's appearance
+        }, index * 300);
       });
     });
 
     // Modal form submission handler
-    document.getElementById('quoteForm').addEventListener('submit', function(event) {
+    document.getElementById('quoteForm').addEventListener('submit', function (event) {
       event.preventDefault();
-      
-      // Validate form
       const name = document.getElementById('name').value;
       const phone_num = document.getElementById('phone_num').value;
-      
+
       if (name && phone_num) {
         alert('Thank you for submitting your quote request! We will get back to you shortly.');
-        // Clear the form
         document.getElementById('quoteForm').reset();
-        // Close the modal
         var modal = bootstrap.Modal.getInstance(document.getElementById('quoteModal'));
         modal.hide();
       } else {
@@ -142,17 +151,6 @@
       }
     });
   </script>
-
-  <!-- Custom Styles for fade-in animation -->
-  <style>
-    .pricing-card {
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-    .pricing-card.fade-in {
-      opacity: 1;
-    }
-  </style>
 
 </body>
 </html>
